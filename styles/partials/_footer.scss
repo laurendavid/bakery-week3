@@ -1,0 +1,121 @@
+footer {
+	padding: 7rem 0;
+	background-image: url('../assets/footerbg.png');
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: cover;
+	.footerContainer {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		.footerDivs {
+			width: 28%;
+			padding: 1rem;
+			h4 {
+				@extend %text;
+			}
+			p {
+				color: $white;
+			}
+			a {
+				color: $medOrange;
+				&:hover {
+					color: $greige;
+				}
+			}
+			.footerSocial {
+				margin-top: 5rem;
+				ul {
+					display: flex;
+					flex-flow: row wrap;
+					li {
+						padding-right: 0.75rem;
+					}
+				}
+			}
+			.footerNav {
+				position: static;
+				text-align: left;
+				padding: 0 0 0 4rem;
+				li {
+					padding-bottom: 0.7rem;
+				}
+			}
+			.footerPosts {
+				margin-top: 5rem;
+				a {
+					display: block;
+					padding-bottom: 0.7rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 940px) {
+	footer {
+		.footerContainer {
+			width: 80%;
+			.footerDivs {
+			width: 30%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	footer {
+		padding: 3rem;
+		background-image: none;
+		background: darken($black, 5%);
+		.footerContainer {
+			width: 100%;
+			.footerDivs {
+			width: 33%;
+			a {
+				&:hover {
+					color: lighten($medOrange, 15%)
+				}
+			}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	footer {
+		padding: 2rem;
+		.footerContainer {
+			padding: 4rem 0;
+			.footerDivs {
+				width: 75%;
+				margin: auto;
+				text-align: center;
+				background: fade-out($black, 0.5);
+				h4 {
+					font-size: 2rem;
+				}
+				li {
+					font-size: 1.8rem;
+				}
+				.footerSocial ul {
+					justify-content: center;
+					.fa {
+						font-size: 2rem;
+						padding: 0.75rem;
+					}
+				}
+				.footerNav {
+					text-align: center;
+					padding: 0;
+				}
+				.footerPosts {
+					padding-bottom: 3rem;
+				}
+			}
+		}
+	}
+}

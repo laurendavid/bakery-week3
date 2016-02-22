@@ -1,0 +1,120 @@
+.sectionContact {
+	padding: 7rem 0;
+	background-image: url('../assets/contactbg.png');
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: cover;
+	.sectionContactContainer {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		.sectionContactItems {
+			width: 48%;
+			li {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				.fa {
+					padding-right: 10px;
+				}
+				p {
+					margin-top: 0;
+					font-weight: 700;
+				}
+				a {
+					color: $black;
+					&:hover {
+						color: lighten($greige, 10%);
+					}
+				}
+			}
+			.social {
+				margin: 3rem 0;
+				display: flex;
+				flex-flow: row wrap;
+				.fa {
+					font-size: 2rem;
+					&:hover {
+						color: $journalGrey;
+					}
+				}
+			}
+			// Google Map
+			iframe {
+				width: 400px;
+				height: 300px;
+			}
+			// Contact Form
+			.contactForm {
+				position: relative;
+				z-index: 5;
+				border: 1px solid $black;
+				form {
+					display: flex;
+					flex-flow: column wrap;
+					@include borderDouble($black);
+					input, textarea {
+						width: 100%;
+						padding: 2rem;
+						&::placeholder {
+							color: $black;
+							font-weight: 700;
+						}
+					}
+					textarea {
+						padding: 7rem 2rem;
+					}
+					.sendButton {
+						@extend %send;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 940px) {
+	.sectionContact {
+		padding: 7rem 3rem;
+		background-position: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.sectionContact .sectionContactContainer .sectionContactItems {
+		iframe {
+			width: 300px;
+		}
+	} 
+}
+
+@media (max-width: 600px) {
+	.sectionContact {
+		background: darken($white, 5%);
+		.sectionContactContainer .sectionContactItems {
+				width: 100%;
+				text-align: center;
+				li {
+					justify-content: center;
+					.fa {
+						font-size: 2rem;
+						color: lighten($greige, 10%);
+					}
+				}
+				.social {
+					justify-content: center;
+				}
+				iframe {
+					width: 450px;
+					margin-bottom: 3rem;
+				}
+		}
+	} 
+}
+
+@media (max-width: 480px) {
+	.sectionContact .sectionContactContainer .sectionContactItems iframe {
+		width: 300px;
+	}
+}

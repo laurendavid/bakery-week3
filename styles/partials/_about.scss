@@ -1,0 +1,54 @@
+.sectionAbout {
+	clear: both;
+	padding: 10rem 0;
+	background-image: url('../assets/aboutbg.png');
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: cover;
+	.sectionAboutItem {
+		width: 45%;
+		min-width: 300px;
+		padding: 3rem 0;
+		h2 {
+			margin-top: 0;
+		}
+		p {
+			line-height: 1.7;
+		}
+		img {
+			margin-top: 8rem;
+		}
+	}
+}
+
+@media (max-width: 940px) {
+	.sectionAbout {
+		background-position: 60%;
+		.sectionAboutItem {
+			padding: 4rem;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.sectionAbout {
+		background-position: 75%;
+		.sectionAboutItem {
+			width: 100%;
+			padding: 6rem;
+			background: fade-out($white, 0.5);
+			p {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.sectionAbout {
+		background-position: 60%;
+		p {
+			color: $darkGrey;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.sectionProducts {
+	background-color: $white;
+	padding: 13rem 0 5rem 0;
+	.sectionProductsContainer {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		.sectionProductsItem {
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			img {
+				width: 70%;
+			}
+			h3 {
+				margin: 1rem 0;
+			}
+			p {
+				text-align: center;
+				padding: 0 2rem;
+				line-height: 1.6;
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.sectionProducts {
+    background-color: #fefcf8;
+    padding: 18rem 0 12rem 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.sectionProducts .sectionProductsContainer .sectionProductsItem {
+		width: 75%;
+		img {
+			max-width: 70%;
+		}
+	}
+}

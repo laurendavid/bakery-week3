@@ -1,0 +1,149 @@
+header {
+	max-width: 100%;
+	height: 80vh;
+	background-image: url("../images/hero.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+
+nav {
+	width: 100%;
+	text-align: right;
+	position: fixed;
+	padding: 3rem;
+	z-index: 20;
+	.hamburger {
+		color: $black;
+		font-size: 25px;
+		position: relative;
+		z-index: 20;
+		.fa-bars {
+			color: $black;
+			font-size: 2.5rem;
+		}
+	}
+	.headerNav {
+	  width: 15%;
+	  height: 100vh;
+	  padding: 5rem 4rem;
+	  background: $greige;
+	  position: fixed;
+		top: 0;
+	  right: -30%;
+	  transition: all 1s ease;
+		&.open {
+		  right: 0;
+		}
+	  li {
+	  	padding: 2.7rem 0;
+	  	margin-top: 1rem;
+	  	text-align: center;
+	  	border-bottom: 1px solid $journalGrey;
+	  	a {
+	  	  font-family: 'Raleway', sans-serif;
+	  	  text-transform: uppercase;
+	  	  color: $white;
+	  	  padding: 2rem 0;
+	  	  font-size: 1.7rem; 
+	  	  &:hover {
+	  	  	color: $medOrange;
+	  		}
+	  	}
+		}
+	}
+}
+
+.headerLogo {
+	width: 100%;
+	padding: 7rem 0 0 0;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	align-content: center;
+	p {
+		color: $white;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1.8rem;
+	}
+}
+
+.headerLocationHours {
+	width: 15%;
+	min-width: 200px;
+	position: absolute;
+	bottom: -18%;
+	left: calc(50% - 7.5%);
+	.headerLocationHoursText {
+		width: 100%;
+		position: absolute;
+		top: 25%;
+		left: calc(50% - 50%);
+		text-align: center;
+		p.squish {
+			margin: 0.1rem 0;
+		}
+		p {
+			font-size: 1.4rem;
+			color: $pureWhite;
+			font-weight: 400;
+		}
+	}
+}
+
+@media (max-width: 940px) {
+	nav {
+		padding: 1.5rem;
+		.hamburger .fa-bars {
+			color: lighten($medGrey, 10%);
+		}
+		.headerNav {
+		width: 30%;
+		}
+	}
+	.headerLocationHours {
+		left: calc(50% - 10.5%);
+	}
+}
+
+@media (max-width: 767px) {
+	.headerLocationHours {
+		left: calc(50% - 12.5%);
+	}
+}
+
+@media (max-width: 600px) {
+	nav .headerNav {
+		width: 50%;
+		right: -60%;
+	}
+	.headerLocationHours {
+		left: calc(50% - 15.5%);
+	}
+}
+
+@media (max-width: 480px) {
+	.headerLogo {
+		img {
+			max-width: 85%;
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+	.headerLocationHours {
+		left: calc(50% - 20.5%);
+	}
+}
+
+
+
+
+
+	
+
+
+
+

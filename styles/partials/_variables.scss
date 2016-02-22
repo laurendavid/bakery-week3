@@ -1,0 +1,124 @@
+$baseFont: 'Raleway', sans-serif;
+$bigHeaderFont: 'Rufina', serif; 
+$pureWhite: #ffffff;
+$white:   #fefcf8;
+$black: #404045;
+$medOrange: rgb(234, 144, 68);
+$darkGrey: rgb(64, 64, 69);
+$medGrey: rgb(103, 103, 110);
+$greige: #727272; 
+$journalGrey: #5c5c5c;
+
+
+// GLOBAL
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 15px;
+	font-size: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+header, section, footer {
+	max-width: 100%;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+h2 {
+	font-family: $bigHeaderFont;
+	color: $medOrange;
+	font-size: 5rem;
+	font-weight: 700;
+	text-align: left;
+}
+
+h3 {
+	font-family: $bigHeaderFont;
+	font-size: 3rem;
+	font-weight: 700;
+	color: $black;
+	margin: 1.5rem 0;
+}
+
+h4 {
+	font-family: $baseFont;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: $baseFont;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+%text {
+	color: $white;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+@mixin borderDouble($color) {
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		bottom: -5px;;
+		left: -5px;
+		border: 3px solid ($color);
+		z-index: -5;
+	} 
+}
+
+.fa {
+	color: $medOrange;
+	font-size: 1.7rem;
+	&:hover {
+		color: $greige;
+	}
+}
+
+
+%send {
+	width: 100%;
+	padding: 5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: $white;
+	background-image: url('../assets/seal.png');
+	background-repeat: no-repeat;
+	background-position: 7% 40%;
+	background-size: 35%;
+}
+
+@media (max-width: 940px) {
+	h2 {
+		text-align: center;
+	}
+}
